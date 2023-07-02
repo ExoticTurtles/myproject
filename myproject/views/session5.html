@@ -1,0 +1,24 @@
+<html>
+<body>
+    {%if person_name == "Luis Daniel" %}
+        <p>You know who the author of this view is you silly!</p>
+    {% else %}
+        <p>The author of this page is: Luis Daniel García, enjoy your stay!</p>
+    {%endif%}
+
+<h1>This is my third views file! The name's {{person_name.lower}} {{last_name.upper}}!</h1>
+<h3>Subjects in this course: </h3>
+<p>
+    <ul>
+    {%if subjects %}
+        {%for subject in subjects%}
+            <li>{{subject}}</li>
+        {% endfor %}
+    {% else %}
+        <li>Lista vacia</li>
+    {% endif %}
+    
+</ul>
+</p>
+</body>
+</html>

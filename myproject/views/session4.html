@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1>This is my third views file! The name's {{person_name}} {{last_name}}!</h1>
+<h3>Subjects in this course: </h3>
+<p>
+    <ul>
+    {%if subjects %}
+        {%for subject in subjects%}
+            <li>{{subject}}</li>
+        {% endfor %}
+    {% else %}
+        <li>Lista vacia</li>
+    {% endif %}
+    
+</ul>
+</p>
+</body>
+</html>
